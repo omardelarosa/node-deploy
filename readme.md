@@ -76,12 +76,47 @@ node v0.10.8 in ~/Desktop/app on master
 deploying to root@192.168.2.4:/var/www/martinrue.com
 ```
 
-## Notes
-- Following a successful deploy, `nd` will wait a further 15 seconds (to account for the configured respawn limits in upstart) to verify the app process is still alive and well.
+## Questions
+After running `nd init`, you'll be asked a series of questions. Here's what each answer is used for:
 
-- As a shorthand, the `nd init`, `nd deploy`, `nd remove` commands can also be referred to by their first character, i.e. `nd i`, `nd d` and `nd r`.
+**app url**
+
+This is the public URL your app will be served from.
+
+**app name**
+
+Specifies the name of the app directory and the nginx/upstart config files.
+
+**app entry point**
+
+The app's main `.js` file. This is the file that `node` will execute when your app starts.
+
+**upstream port**
+
+The port the node app listens on. This is needed to properly link the node process with the upstream nginx server.
+
+**app path on server**
+
+The directory that the app will be clone into and run from on the server.
+
+**nginx sites-enabled path**
+
+The path of the nginx `sites-enabled` directory. The nginx config file will be copied here.
+
+**git clone URL**
+
+The URL of the repo. The repo is cloned on the first deploy and then pulled from thereafter.
+
+**server SSH address**
+
+The user + host address of the server, i.e. `root@yourserver.com`.
+
+## Notes
+- Following a successful deploy, `nd` will wait a further 15 seconds (to account for the configured respawn limits of upstart) to verify the app process is still alive and well.
+
+- As a shorthand, the `nd init`, `nd deploy`, `nd remove` commands can also be referred to by their first letter, i.e. `nd i`, `nd d` and `nd r`.
 
 - If no errors are reported, the command was successful. The respective zero or non-zero error code is returned to allow `nd` to be invoked by third party tools.
 
-- It's assumed that **all** files in the `sites-enabled` nginx directory are valid config files, i.e. that your `nginx.conf` includes them something like this `include /etc/nginx/sites-enabled/*;`.
+- It's assumed that **all** files in the `sites-enabled` nginx directory are valid config files, i.e. that your `nginx.conf` includes them using something like this `include /etc/nginx/sites-enabled/*;`.
 
