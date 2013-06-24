@@ -80,7 +80,7 @@ And finally, deploy:
 ```no-highlight
 node v0.10.8 in ~/Desktop/app on master 
 → nd deploy
-deploying to root@192.168.2.4:/var/www/martinrue.com
+deploying master to root@192.168.2.4:/var/www/martinrue.com
 ```
 
 ## Questions
@@ -104,7 +104,7 @@ The port the node app listens on. This is needed to properly link the node proce
 
 ####app path on server
 
-The directory that the app will be clone into and run from on the server.
+The directory the app will be cloned into and run from on the server.
 
 ####nginx sites-enabled path
 

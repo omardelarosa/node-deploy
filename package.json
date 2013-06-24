@@ -1,0 +1,22 @@
+{
+  "name": "node-deploy",
+  "version": "0.0.1",
+  "description": "Makes deploying node web apps to nginx+upstart machines easy",
+  "main": "node-deploy.js",
+  "author": "Martin Rue",
+  "homepage": "https://github.com/martinrue/node-deploy",
+  "license": "BSD",
+  "dependencies": {
+    "async": "~0.2.9",
+    "glob": "~3.2.1",
+    "underscore": "~1.4.4"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinrue/node-deploy.git"
+  },
+  "bin": {
+    "nd": "node-deploy.js"
+  }
+}
