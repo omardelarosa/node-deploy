@@ -1,6 +1,6 @@
 {
   "name": "node-deploy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Makes deploying node web apps to nginx+upstart machines easy",
   "main": "node-deploy.js",
   "author": "Martin Rue",
