@@ -127,3 +127,6 @@ The user + host address of the server, i.e. `root@yourserver.com`.
 
 - It's assumed that **all** files in the `sites-enabled` nginx directory are valid config files, i.e. that your `nginx.conf` includes them using something like this `include /etc/nginx/sites-enabled/*;`.
 
+## Testing
+
+Tests are written using mocha, and can be executed via `npm test`.
