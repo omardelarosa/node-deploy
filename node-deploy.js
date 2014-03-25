@@ -4,7 +4,7 @@ var scripts = require('./lib/scripts');
 var config = require('./lib/config');
 var deploy = require('./lib/deploy');
 var pkg = require('./package.json');
-var _ = require('underscore');
+var _ = require('lodash');
 
 var showUsage = function() {
   console.log('usage: nd [init | deploy | remove] -b <branch> -d <directory>');
